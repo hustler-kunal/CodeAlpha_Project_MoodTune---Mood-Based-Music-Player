@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MoodTune - Mood Based Music Player</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <h1>MoodTune 🎵</h1>
+    <div class="mood-select">
+      <button data-mood="chill">Chill</button>
+      <button data-mood="focus">Focus</button>
+      <button data-mood="happy">Happy</button>
+    </div>
+
+    <div class="player">
+      <img src="" id="cover" class="cover" alt="Album cover" />
+      <h2 id="title">Select a mood</h2>
+      <audio id="audio"></audio>
+      <div class="controls">
+        <button id="prev">⏮</button>
+        <button id="play">▶️</button>
+        <button id="next">⏭</button>
+        <button id="repeat">🔁</button>
+        <button id="shuffle">🔀</button>
+      </div>
+      <div class="volume-control">
+        <input type="range" id="volume" min="0" max="1" step="0.01" value="1" />
+        <span id="volume-value">100%</span> <!-- Volume value display -->
+      </div>
+      <input type="range" id="seekbar" value="0" />
+      <div class="time-display">
+        <span id="current-time">0:00</span> / <span id="duration">0:00</span>
+      </div>
+      <div class="playlist">
+        <h3>Playlist:</h3>
+        <ul id="playlist"></ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

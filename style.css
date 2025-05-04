@@ -1,0 +1,197 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5));
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.app {
+  text-align: center;
+  width: 90%;
+  max-width: 450px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #f1c40f;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Mood Selection */
+.mood-select button {
+  margin: 0.5rem;
+  padding: 0.7rem 1.5rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 30px;
+  background: #fff;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.mood-select button:hover {
+  background: #f1c40f;
+  transform: scale(1.05);
+}
+
+.mood-select button:active {
+  transform: scale(0.95);
+}
+
+.mood-select {
+  margin-bottom: 1.5rem;
+}
+
+/* Player Styles */
+.player {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cover {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  transition: transform 0.5s ease-in-out;
+}
+
+.cover:hover {
+  transform: scale(1.1);
+}
+
+#title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 1rem 0;
+  color: #fff;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+}
+
+/* Control Buttons */
+.controls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.controls button {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  font-size: 2rem;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.controls button:hover {
+  background: #f39c12;
+  transform: scale(1.1);
+}
+
+.controls button:active {
+  transform: scale(0.95);
+}
+
+/* Volume Slider */
+.volume-control {
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+}
+
+#volume {
+  width: 80%;
+  cursor: pointer;
+  background: #f1c40f;
+  border-radius: 8px;
+}
+
+#volume::-webkit-slider-runnable-track {
+  background: #f1c40f;
+}
+
+#volume::-webkit-slider-thumb {
+  background: #fff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+
+#volume-value {
+  margin-left: 10px;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+#seekbar {
+  width: 100%;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+/* Time Display */
+.time-display {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.time-display span {
+  font-weight: 600;
+}
+
+/* Playlist Section */
+.playlist {
+  margin-top: 1.5rem;
+}
+
+.playlist ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.playlist li {
+  cursor: pointer;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+  transition: background 0.3s ease, padding-left 0.3s ease;
+}
+
+.playlist li:hover {
+  background: rgba(255, 255, 255, 0.2);
+  padding-left: 20px;
+}
+
+/* Body Mood-Color Transitions */
+body[data-mood="chill"] {
+  background: linear-gradient(135deg, #2c3e50, #3498db);
+}
+
+body[data-mood="focus"] {
+  background: linear-gradient(135deg, #2e2e2e, #6c5ce7);
+}
+
+body[data-mood="happy"] {
+  background: linear-gradient(135deg, #f39c12, #f1c40f);
+}
